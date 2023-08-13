@@ -8,7 +8,7 @@ It is <b>NOT</b> a production ready code but rather a demo version in <i>a Getti
 with a reasonable invested time for further live discussion 
 
 ### The project slightly covers Developer activities
-* Kotlin
+* Kotlin & Java 17
 * Springboot world 
 * REST CRUD & pagination API
 * Versioning of API
@@ -25,7 +25,8 @@ with a reasonable invested time for further live discussion
 ### The project slightly covers Operational activities
 * Build OCI image
   * manually through Dockerfile
-  * using [Cloud Native Buildpacks](https://buildpacks.io/) through [bootBuildImage](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/#build-image) task
+  * FIXME: using [Cloud Native Buildpacks](https://buildpacks.io/) through [bootBuildImage](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/#build-image) task. 
+Firewall on a company laptop blocks some requests what caused:  javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target.
 * Deploy to local k8s cluster: script to deploy Deployment, Service and Ingress 
 
 ### TODO Next

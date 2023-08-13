@@ -24,10 +24,11 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation ("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     runtimeOnly("org.postgresql:postgresql")
+    implementation("org.liquibase:liquibase-core")
 
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
@@ -52,4 +53,9 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+// disable plain.jar to favor bootJar.jar
+tasks.named("jar") {
+    enabled = false
 }
