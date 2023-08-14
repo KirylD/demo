@@ -9,3 +9,14 @@ spring:
 
   liquibase:
     change-log: db.changelog.sql
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true

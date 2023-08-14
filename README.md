@@ -7,7 +7,7 @@
 It is <b>NOT</b> a production ready code but rather a demo version in <i>a Getting Started style</i> 
 with a reasonable invested time for further live discussion 
 
-### The project slightly covers Developer activities
+### Dev activities
 * Kotlin & Java 17
 * Springboot world 
 * REST CRUD & pagination API
@@ -22,14 +22,15 @@ with a reasonable invested time for further live discussion
 * Hotswap: DevTools
 * Docker-compose: set up local infra such as Postgres db & Admin UI
 
-### The project slightly covers Operational activities
+### Ops activities
 * Build OCI image
   * manually through Dockerfile
   * FIXME: using [Cloud Native Buildpacks](https://buildpacks.io/) through [bootBuildImage](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/#build-image) task. 
 Firewall on a company laptop blocks some requests what caused:  javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target.
 * Deploy to local k8s cluster: script to deploy Deployment, Service and Ingress 
 
-### TODO Next
+### TODO
+* Adopt ConfigMaps 
 * Introduce GitHub Actions
   * to verify PullRequests and run tests 
   * to build the image, run tests and publish image to registry
