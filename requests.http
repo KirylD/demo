@@ -11,3 +11,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8080/actuator/health/readiness
+
+###
+GET http://localhost:8080/actuator/prometheus
+
